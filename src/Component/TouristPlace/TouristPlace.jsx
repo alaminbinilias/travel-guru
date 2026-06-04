@@ -1,4 +1,4 @@
-import { use, useRef, useState } from "react";
+import { use, useRef} from "react";
 import PlaceCard from "../PlaceCard/PlaceCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -6,15 +6,15 @@ import "swiper/css";
 import { NavLink } from "react-router";
 import { FaArrowLeft, FaArrowRight, FaLongArrowAltRight } from "react-icons/fa";
 import { Navigation } from "swiper/modules";
+import Context from "../Context/Context/Context";
 
 
 const data = fetch("./data.json").then((res) => res.json());
 const TouristPlace = () => {
     const Data = use(data);
     //sconsole.log(Data);
-
-    const [activeIndex, setActiveIndex] = useState(0);
     const swiperRef = useRef(null);
+    const {setActiveIndex,activeIndex,nextCard,PreviousCard} =use(Context);
 
     return (
         <div className="flex-1 w-11/12 mx-auto items-center h-full grid grid-cols-2 gap-3">
@@ -29,22 +29,19 @@ const TouristPlace = () => {
                     modules={[Navigation]}
                     slidesPerView={3}
                     centeredSlides={true}
-                    spaceBetween={-170}
+                    spaceBetween={-100}
                     loop={false}
                     onSwiper={(swiper) => {
                         swiperRef.current = swiper;
                     }}
-                    onSlideChange={(swiper) =>
-                        setActiveIndex(swiper.realIndex)
-                    }
                 >
                     {
-                        Data.map((place, index) => (<SwiperSlide key={index}><PlaceCard activeIndex={activeIndex} place={place}></PlaceCard></SwiperSlide>))
+                        Data.map((place, index) => (<SwiperSlide setActiveIndex={index} key={index}><PlaceCard place={place}></PlaceCard></SwiperSlide>))
                     }
                 </Swiper>
                 <div className="flex gap-1 justify-center mt-10">
-                    <button onClick={()=>swiperRef.current?.slidePrev()} className=" btn w-12 h-12 bg-white flex justify-center items-center rounded-full"><FaArrowLeft color="black" /></button>
-                    <button onClick={()=>swiperRef.current.slideNext()} className=" btn w-12 h-12 bg-white flex justify-center items-center rounded-full"><FaArrowRight color="black" /></button>
+                    <button onClick={()=>{swiperRef.current?.slidePrev(),PreviousCard()}} className=" btn w-12 h-12 bg-white flex justify-center items-center rounded-full"><FaArrowLeft color="black" /></button>
+                    <button onClick={()=>{swiperRef.current?.slideNext(),nextCard()}} className=" btn w-12 h-12 bg-white flex justify-center items-center rounded-full"><FaArrowRight color="black" /></button>
                 </div>
             </div>
         </div >
