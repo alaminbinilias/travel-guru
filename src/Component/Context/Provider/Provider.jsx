@@ -1,13 +1,22 @@
 //import React from 'react';
+import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import Context from "../Context/Context";
-import { use, useState } from "react";
+import { use, useEffect, useState } from "react";
+import auth from "../../Firebase/firebase.config";
 
 const Data=fetch('./data.json').then(res=>res.json());
 const Provider = ({ children }) => {
+
+    const [currentUser,setcurrentUser]=useState(null);
+        const [placeName, setPlaceName] = useState('');
+
+    const googleProvider= new GoogleAuthProvider();
+    const githubProvider= new GithubAuthProvider();
+
     const data=use(Data);
     const [activeIndex, setActiveIndex] = useState(0);
     //console.log(data.length);
-
+    
     const nextCard=()=>{
         if(activeIndex===data.length-1){
             setActiveIndex(data.length-1);
@@ -26,12 +35,78 @@ const Provider = ({ children }) => {
         }
     }
 
+
+    ///authContext Section
+
+    useEffect(()=>{
+        const unmounts=onAuthStateChanged(auth,(user)=>{
+            setcurrentUser(user);
+        });
+        return ()=>unmounts();
+    },[])
+
+
+    ///create user
+    const CreateUser=(email,password)=>{
+        return createUserWithEmailAndPassword(auth,email,password);
+    }
+
+    ///signIn User
+    const SignUser=(email,pass)=>{
+        return signInWithEmailAndPassword(auth,email,pass);
+    }
+
+    ///GooglesignInuser
+
+    const GoogleSignUser=()=>{
+        return signInWithPopup(auth,googleProvider);
+    }
+
+    ///githubuser
+
+    const githubuser=()=>{
+        return signInWithPopup(auth,githubProvider);
+    }
+
+    ///reset password
+
+    const passReset=(email)=>{
+        return sendPasswordResetEmail(auth,email);
+    }
+
+    ///signOut user
+
+    const SignOutUser=()=>{
+        return signOut(auth);
+    }
+
+
+    ///updatedUserName
+
+    const updateUserProfile=(name)=>{
+        return updateProfile(auth.currentUser,{displayName:name});
+    }
+
+
+
+
     const value = {
         activeIndex,
         setActiveIndex,
         PreviousCard,
         nextCard,
-        data
+        data,
+        CreateUser,
+        SignUser,
+        GoogleSignUser,
+        githubuser,
+        passReset,
+        currentUser,
+        setcurrentUser,
+        SignOutUser,
+        updateUserProfile,
+        placeName,
+        setPlaceName
     };
 
 

@@ -2,12 +2,23 @@
 
 import { NavLink } from "react-router";
 import logo from "../../assets/images/icons/logo.png";
+import { use } from "react";
+import Context from "../Context/Context/Context";
 
 const NavSection = () => {
+
+  const { currentUser, setcurrentUser, SignOutUser } = use(Context);
+
+  const HandleSignOut=()=>{
+    SignOutUser().then(()=>{
+      setcurrentUser(null);
+    })
+  }
+
   return (
     <div className=" pt-4 grid grid-cols-3 items-center justify-between w-11/12 mx-auto px-3 py-1">
       <div className="col-span-1">
-        <img src={logo} alt="" />
+        <NavLink to='/'><img src={logo} alt="" /></NavLink>
       </div>
       <div className="search col-span-1 items-center">
         <div>
@@ -41,7 +52,9 @@ const NavSection = () => {
         <NavLink className='hover:underline'>Destination</NavLink>
         <NavLink className='hover:underline'>Blog</NavLink>
         <NavLink className='hover:underline'>Contact</NavLink>
-        <button className=" bg-[#F9A51A] px-7 py-2 rounded-[0.3rem] text-black cursor-pointer font-semibold">Login</button>
+        {
+          currentUser ? <NavLink onClick={HandleSignOut} className=" bg-[#F9A51A] px-7 py-2 rounded-[0.3rem] text-black cursor-pointer font-semibold">{currentUser.displayName}</NavLink> : <NavLink to='/login' className=" bg-[#F9A51A] px-7 py-2 rounded-[0.3rem] text-black cursor-pointer font-semibold">Login</NavLink>
+        }
       </div>
     </div>
   );

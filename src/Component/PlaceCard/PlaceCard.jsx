@@ -1,7 +1,8 @@
+import { NavLink } from "react-router";
 
 const PlaceCard = ({ place }) => {
   return (
-      <div className="cursor-pointer text-gray-200">
+      <NavLink to={`/category/${place.id}`} className="cursor-pointer text-gray-200">
         <div
           className="card bg-base-100 hover:scale-105 transition ease-in-out flex h-80 w-60 bg-cover"
           style={{ backgroundImage: `url(${place.image})` }}
@@ -12,7 +13,7 @@ const PlaceCard = ({ place }) => {
             </h2>
           </div>
         </div>
-      </div>
+      </NavLink>
   );
 };
 
