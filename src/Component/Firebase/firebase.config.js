@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDFQzYz4NqrQwdpc0iJVZW1AUsn5nogdQw",
-  authDomain: "travel-guru-28083.firebaseapp.com",
-  projectId: "travel-guru-28083",
-  storageBucket: "travel-guru-28083.firebasestorage.app",
-  messagingSenderId: "1001487869366",
-  appId: "1:1001487869366:web:b7b9e45bd4d00bb4850d17"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { use, useState } from "react";
 import Context from "../Context/Context/Context";
 import LoginNavSection from "../LoginNavSection/LoginNavSection";
+import Swal from "sweetalert2";
 
 const RegistrationSection = () => {
 
@@ -36,11 +37,16 @@ const RegistrationSection = () => {
 
             updateUserProfile(name).then(() => {
                 setcurrentUser({ ...currentUser, displayName: name });
-            }).catch(err => console.log(err));
+            }).catch(err => err);
 
             console.log(result.user);
-            alert("Registration Successful");
+            Swal.fire({
+                title: "Great!",
+                text: "Registration Successfully",
+                icon: "success"
+            });
             event.target.reset();
+            setcurrentUser(null)
         }).catch(err => {
             console.log(err);
         })

@@ -4,19 +4,25 @@ import { use } from "react";
 import NavSection from "../NavSection/NavSection";
 import Context from "../Context/Context/Context";
 import './BookingSection.css';
-import { NavLink, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 const BookingSection = () => {
-    const { data,setPlaceName } = use(Context);
+    const { setPlaceName, data } = use(Context);
     const { id } = useParams();
     const filterData = data.find(place => place.id == id);
     //console.log(filterData);
+    const Navigate = useNavigate();
 
-    const hndleBookingInfo=(event)=>{
+
+    const handleSubmit = (event) => {
         event.preventDefault();
-        const placeName=event.target.destination.value;
-        console.log(placeName);
-        setPlaceName(placeName);
+        console.log("Clicked");
+        Navigate('/availblehotels');
+
+        const desti = event.target.destination.value;
+        //console.log(desti);
+        setPlaceName(desti);
+
     }
 
     return (
@@ -42,32 +48,32 @@ const BookingSection = () => {
                     <div>
                         <div className="h-100 justify-center">
 
-                            <form onSubmit={hndleBookingInfo}>
+                            <form onSubmit={handleSubmit}>
                                 <fieldset className="fieldset bg-[#FFFF] pt-4 border-base-300 rounded-box  w-full py-4 px-10 border h-100">
 
                                     <label className="label text-black pt-4 font-semibold text-[1rem]">Origin</label>
-                                    <input type="text" className="input font-medium text-[1rem] w-full bg-[#F2F2F2] text-md text-black py-5" placeholder="Please Enter Your Starting Place" />
+                                    <input type="text" required className="input font-medium text-[1rem] w-full bg-[#F2F2F2] text-md text-black py-5" placeholder="Please Enter Your Starting Place" />
 
                                     <label className="label text-black font-semibold text-[1rem]">Destination</label>
-                                    <input type="text" name='destination' className="input font-medium text-[1rem] w-full bg-[#F2F2F2] text-md text-black py-5" placeholder="Please place your destination" />
+                                    <input type="text" required required name='destination' className="input font-medium text-[1rem] w-full bg-[#F2F2F2] text-md text-black py-5" placeholder="Please place your destination" />
 
                                     <div className="w-full flex  gap-3 justify-between ">
                                         <div className="left text-black mt-4 w-full">
                                             <p className="text-black font-bold text-[1rem]">Form</p>
-                                            <input type="date" className="input text-white bg-[#868484] validator" required placeholder="Pick a date"
+                                            <input type="date" required className="input text-white bg-[#868484] validator" required placeholder="Pick a date"
                                                 min="2025-01-01" max=""
                                                 title="Must be valid URL" />
                                         </div>
 
                                         <div className="right text-black mt-4 w-full">
                                             <p className="text-black font-bold text-[1rem]">To</p>
-                                            <input type="date" className="input w-full text-white bg-[#868484] validator" required placeholder="Pick a date"
+                                            <input type="date" id='endDate' className="input required w-full text-white bg-[#868484] validator" required placeholder="Pick a date"
                                                 min="2025-01-01" max=""
                                                 title="Must be valid URL" />
                                         </div>
                                     </div>
 
-                                    <NavLink type="submit" className=" btn  border-[#F9A51A] text-black bg-[#F9A51A] mt-6">Start Booking</NavLink>
+                                    <button type="submit" className=" btn  border-[#F9A51A] text-black bg-[#F9A51A] mt-6">Start Booking</button>
                                 </fieldset>
                             </form>
 

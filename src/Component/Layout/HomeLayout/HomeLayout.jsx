@@ -10,6 +10,8 @@ const HomeLayout = () => {
 
   const {activeIndex,data}= use(Context);
 
+  //console.log(data);
+
   return (
     <div>
       <div

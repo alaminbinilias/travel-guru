@@ -16,11 +16,45 @@
             "Swimming Pool",
             "Breakfast",
             "Parking"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Ocean Paradise Hotel",
+                "hotelDescription": "Premium beachfront hotel with modern luxury amenities.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 2,
+                "rating": 4.6,
+                "rentPerNight": 10500,
+                "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+                "facilities": [
+                    "WiFi",
+                    "Pool",
+                    "Restaurant",
+                    "Parking"
+                ]
+            },
+            {
+                "hotelName": "Royal Tulip Sea Pearl",
+                "hotelDescription": "5-star luxury resort with sea view suites.",
+                "guestCapacity": 5,
+                "bedrooms": 2,
+                "bathrooms": 2,
+                "rating": 4.7,
+                "rentPerNight": 14000,
+                "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+                "facilities": [
+                    "WiFi",
+                    "Breakfast",
+                    "Gym",
+                    "Pool"
+                ]
+            }
         ]
     },
     {
         "id": 2,
-        "touristPlace": "Cox's Bazar Sea Beach",
+        "touristPlace": "Rangamati",
         "district": "Cox's Bazar",
         "hotelName": "Long Beach Hotel",
         "hotelDescription": "Modern hotel located near the beach with comfortable family rooms.",
@@ -29,11 +63,75 @@
         "bathrooms": 1,
         "rating": 4.5,
         "rentPerNight": 8500,
-        "image": "https://tripjive.com/wp-content/uploads/2024/09/reasons-to-visit-Coxs-Bazar-1024x585.jpg",
+        "image": "https://www.travelandexplorebd.com/storage/app/public/posts/February2020/6yU9wNg64XgG4ttvSVlL.jpg",
         "facilities": [
             "WiFi",
             "Restaurant",
             "Gym"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Sajek Paradise Resort",
+                "hotelDescription": "Beautiful hilltop resort with cloud-covered mountain views and peaceful environment.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 1,
+                "rating": 4.6,
+                "rentPerNight": 7500,
+                "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+                "facilities": [
+                    "Hill View",
+                    "Bonfire",
+                    "Parking",
+                    "Restaurant"
+                ]
+            },
+            {
+                "hotelName": "Cloud View Resort Sajek",
+                "hotelDescription": "Stay above the clouds with stunning sunrise and sunset views.",
+                "guestCapacity": 3,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.5,
+                "rentPerNight": 6800,
+                "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+                "facilities": [
+                    "Cloud View",
+                    "WiFi",
+                    "Hill View"
+                ]
+            },
+            {
+                "hotelName": "Hilltop Eco Cottage",
+                "hotelDescription": "Eco-friendly wooden cottages surrounded by green hills and nature.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 1,
+                "rating": 4.4,
+                "rentPerNight": 6000,
+                "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+                "facilities": [
+                    "Eco Stay",
+                    "Nature View",
+                    "Bonfire"
+                ]
+            },
+            {
+                "hotelName": "Rangamati Lake View Resort",
+                "hotelDescription": "Relaxing resort near Kaptai Lake with boat and lake view experience.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 2,
+                "rating": 4.7,
+                "rentPerNight": 8200,
+                "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+                "facilities": [
+                    "Lake View",
+                    "Boat Service",
+                    "WiFi",
+                    "Restaurant"
+                ]
+            }
         ]
     },
     {
@@ -52,6 +150,38 @@
             "Sea View",
             "WiFi",
             "Restaurant"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Coral Blue Resort",
+                "hotelDescription": "Peaceful island resort with beach cottages.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 2,
+                "rating": 4.5,
+                "rentPerNight": 8800,
+                "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+                "facilities": [
+                    "WiFi",
+                    "Sea View",
+                    "Restaurant"
+                ]
+            },
+            {
+                "hotelName": "Saint Martin Eco Resort",
+                "hotelDescription": "Eco-friendly resort near pristine beaches.",
+                "guestCapacity": 3,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.4,
+                "rentPerNight": 7500,
+                "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+                "facilities": [
+                    "Eco Stay",
+                    "WiFi",
+                    "Beach Access"
+                ]
+            }
         ]
     },
     {
@@ -70,6 +200,38 @@
             "Balcony",
             "Generator",
             "Parking"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Runmoy Resort",
+                "hotelDescription": "Beautiful hill resort with cloud views.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 1,
+                "rating": 4.5,
+                "rentPerNight": 6800,
+                "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+                "facilities": [
+                    "Hill View",
+                    "Parking",
+                    "Restaurant"
+                ]
+            },
+            {
+                "hotelName": "Alo Resort Sajek",
+                "hotelDescription": "Peaceful resort surrounded by hills and clouds.",
+                "guestCapacity": 3,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.4,
+                "rentPerNight": 6200,
+                "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+                "facilities": [
+                    "WiFi",
+                    "Hill View",
+                    "Bonfire"
+                ]
+            }
         ]
     },
     {
@@ -87,6 +249,37 @@
         "facilities": [
             "Mountain View",
             "Restaurant"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Meghpunji Resort",
+                "hotelDescription": "Cloud surrounded resort in Sajek valley.",
+                "guestCapacity": 3,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.3,
+                "rentPerNight": 5200,
+                "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+                "facilities": [
+                    "Cloud View",
+                    "Restaurant"
+                ]
+            },
+            {
+                "hotelName": "Sajek Hill View Resort",
+                "hotelDescription": "Cozy cottages with mountain scenery.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 1,
+                "rating": 4.5,
+                "rentPerNight": 6000,
+                "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+                "facilities": [
+                    "Hill View",
+                    "Bonfire",
+                    "Parking"
+                ]
+            }
         ]
     },
     {
@@ -106,6 +299,36 @@
             "Spa",
             "WiFi",
             "Breakfast"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Tea Heaven Resort",
+                "hotelDescription": "Resort surrounded by tea gardens.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 1,
+                "rating": 4.6,
+                "rentPerNight": 9000,
+                "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35",
+                "facilities": [
+                    "Tea Garden View",
+                    "WiFi"
+                ]
+            },
+            {
+                "hotelName": "Green Leaf Guest House",
+                "hotelDescription": "Budget-friendly stay near nature.",
+                "guestCapacity": 3,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.3,
+                "rentPerNight": 4500,
+                "image": "https://images.unsplash.com/photo-1455587734955-081b22074882",
+                "facilities": [
+                    "WiFi",
+                    "Breakfast"
+                ]
+            }
         ]
     },
     {
@@ -123,6 +346,36 @@
         "facilities": [
             "Boat Tour",
             "Restaurant"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Ratargul Nature Resort",
+                "hotelDescription": "Stay near swamp forest with nature views.",
+                "guestCapacity": 3,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.4,
+                "rentPerNight": 4800,
+                "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429",
+                "facilities": [
+                    "Nature View",
+                    "Boat Service"
+                ]
+            },
+            {
+                "hotelName": "Swamp Forest Lodge",
+                "hotelDescription": "Eco lodge surrounded by wetlands.",
+                "guestCapacity": 2,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.2,
+                "rentPerNight": 4000,
+                "image": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
+                "facilities": [
+                    "Eco Stay",
+                    "Boat Tour"
+                ]
+            }
         ]
     },
     {
@@ -141,6 +394,36 @@
             "Garden",
             "WiFi",
             "Parking"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Jaflong Inn",
+                "hotelDescription": "Comfortable stay near river and hills.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 1,
+                "rating": 4.3,
+                "rentPerNight": 5000,
+                "image": "https://images.unsplash.com/photo-1505692794403-34d4982b8f3b",
+                "facilities": [
+                    "River View",
+                    "Parking"
+                ]
+            },
+            {
+                "hotelName": "River Stone Resort",
+                "hotelDescription": "Peaceful riverside resort in Jaflong.",
+                "guestCapacity": 3,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.4,
+                "rentPerNight": 5200,
+                "image": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
+                "facilities": [
+                    "River View",
+                    "Restaurant"
+                ]
+            }
         ]
     },
     {
@@ -159,6 +442,36 @@
             "Restaurant",
             "WiFi",
             "Parking"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Kuakata Beach Resort",
+                "hotelDescription": "Beachside resort with sunrise view.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 1,
+                "rating": 4.5,
+                "rentPerNight": 7000,
+                "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+                "facilities": [
+                    "Beach View",
+                    "WiFi"
+                ]
+            },
+            {
+                "hotelName": "Hotel Graver Inn",
+                "hotelDescription": "Comfortable stay near Kuakata beach.",
+                "guestCapacity": 3,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.3,
+                "rentPerNight": 6000,
+                "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+                "facilities": [
+                    "WiFi",
+                    "Restaurant"
+                ]
+            }
         ]
     },
     {
@@ -177,6 +490,36 @@
             "Parking",
             "Restaurant",
             "WiFi"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Nilgiri Resort",
+                "hotelDescription": "Mountain top resort with breathtaking views.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 1,
+                "rating": 4.6,
+                "rentPerNight": 8000,
+                "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+                "facilities": [
+                    "Hill View",
+                    "Restaurant"
+                ]
+            },
+            {
+                "hotelName": "Hillside Cottage Bandarban",
+                "hotelDescription": "Peaceful cottage stay in hills.",
+                "guestCapacity": 3,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.4,
+                "rentPerNight": 5500,
+                "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+                "facilities": [
+                    "Hill View",
+                    "Bonfire"
+                ]
+            }
         ]
     },
     {
@@ -194,6 +537,36 @@
         "facilities": [
             "Tour Service",
             "Restaurant"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Sundarban Tourist Motel",
+                "hotelDescription": "Convenient stay for forest tours.",
+                "guestCapacity": 3,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.3,
+                "rentPerNight": 5200,
+                "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+                "facilities": [
+                    "Tour Guide",
+                    "Restaurant"
+                ]
+            },
+            {
+                "hotelName": "Forest View Resort",
+                "hotelDescription": "Eco stay near Sundarbans forest.",
+                "guestCapacity": 4,
+                "bedrooms": 2,
+                "bathrooms": 1,
+                "rating": 4.4,
+                "rentPerNight": 6000,
+                "image": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
+                "facilities": [
+                    "Forest View",
+                    "Boat Tour"
+                ]
+            }
         ]
     },
     {
@@ -211,6 +584,36 @@
         "facilities": [
             "WiFi",
             "Breakfast"
+        ],
+        "hotels": [
+            {
+                "hotelName": "Sompur Heritage Resort",
+                "hotelDescription": "Stay near ancient Buddhist monastery.",
+                "guestCapacity": 3,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.2,
+                "rentPerNight": 4200,
+                "image": "https://images.unsplash.com/photo-1505691723518-36a5ac3b2b8f",
+                "facilities": [
+                    "Heritage View",
+                    "WiFi"
+                ]
+            },
+            {
+                "hotelName": "Archaeology Guest House",
+                "hotelDescription": "Simple stay near historical sites.",
+                "guestCapacity": 2,
+                "bedrooms": 1,
+                "bathrooms": 1,
+                "rating": 4.0,
+                "rentPerNight": 3500,
+                "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+                "facilities": [
+                    "Budget Stay",
+                    "Breakfast"
+                ]
+            }
         ]
     }
 ]

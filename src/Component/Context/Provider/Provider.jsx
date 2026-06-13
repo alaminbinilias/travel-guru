@@ -4,87 +4,94 @@ import Context from "../Context/Context";
 import { use, useEffect, useState } from "react";
 import auth from "../../Firebase/firebase.config";
 
-const Data=fetch('./data.json').then(res=>res.json());
+const Data = fetch('/data.json').then(res => res.json());
+
 const Provider = ({ children }) => {
 
-    const [currentUser,setcurrentUser]=useState(null);
-        const [placeName, setPlaceName] = useState('');
 
-    const googleProvider= new GoogleAuthProvider();
-    const githubProvider= new GithubAuthProvider();
+    //const [data, setData] = useState([]);
+    const data = use(Data);
 
-    const data=use(Data);
+    const [loading, setLoading] = useState(true);
+
+    const [currentUser, setcurrentUser] = useState(null);
+    const [placeName, setPlaceName] = useState('');
+    const [searchValue, setsearchValue] = useState('');
+
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
     const [activeIndex, setActiveIndex] = useState(0);
     //console.log(data.length);
-    
-    const nextCard=()=>{
-        if(activeIndex===data.length-1){
-            setActiveIndex(data.length-1);
+
+    const nextCard = () => {
+        if (activeIndex === data.length - 1) {
+            setActiveIndex(data.length - 1);
         }
-        else{
-            setActiveIndex(activeIndex+1);
+        else {
+            setActiveIndex(activeIndex + 1);
         }
     }
 
-    const PreviousCard=()=>{
-        if(activeIndex===0){
+    const PreviousCard = () => {
+        if (activeIndex === 0) {
             setActiveIndex(0);
         }
-        else{
-            setActiveIndex(activeIndex-1);
+        else {
+            setActiveIndex(activeIndex - 1);
         }
     }
 
 
     ///authContext Section
 
-    useEffect(()=>{
-        const unmounts=onAuthStateChanged(auth,(user)=>{
+    useEffect(() => {
+        const unmounts = onAuthStateChanged(auth, (user) => {
             setcurrentUser(user);
+            setLoading(false);
         });
-        return ()=>unmounts();
-    },[])
+        return () => unmounts();
+    }, [])
 
 
     ///create user
-    const CreateUser=(email,password)=>{
-        return createUserWithEmailAndPassword(auth,email,password);
+    const CreateUser = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password);
     }
 
     ///signIn User
-    const SignUser=(email,pass)=>{
-        return signInWithEmailAndPassword(auth,email,pass);
+    const SignUser = (email, pass) => {
+        return signInWithEmailAndPassword(auth, email, pass);
     }
 
     ///GooglesignInuser
 
-    const GoogleSignUser=()=>{
-        return signInWithPopup(auth,googleProvider);
+    const GoogleSignUser = () => {
+        return signInWithPopup(auth, googleProvider);
     }
 
     ///githubuser
 
-    const githubuser=()=>{
-        return signInWithPopup(auth,githubProvider);
+    const githubuser = () => {
+        return signInWithPopup(auth, githubProvider);
     }
 
     ///reset password
 
-    const passReset=(email)=>{
-        return sendPasswordResetEmail(auth,email);
+    const passReset = (email) => {
+        return sendPasswordResetEmail(auth, email);
     }
 
     ///signOut user
 
-    const SignOutUser=()=>{
+    const SignOutUser = () => {
         return signOut(auth);
     }
 
 
     ///updatedUserName
 
-    const updateUserProfile=(name)=>{
-        return updateProfile(auth.currentUser,{displayName:name});
+    const updateUserProfile = (name) => {
+        return updateProfile(auth.currentUser, { displayName: name });
     }
 
 
@@ -106,9 +113,13 @@ const Provider = ({ children }) => {
         SignOutUser,
         updateUserProfile,
         placeName,
-        setPlaceName
-    };
+        setPlaceName,
+        setsearchValue,
+        searchValue,
+        setLoading,
+        loading
 
+    };
 
     return (
         <Context value={value}>
